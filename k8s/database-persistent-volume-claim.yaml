@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: database-persistent-volume-claim
+
+#given to a pod, to allow it to request from kubenetes these requreimrents 
+spec: 
+    accessModes:
+        - ReadWriteOnce
+    resources: 
+        requests:
+            storage: 1Gi
+    
